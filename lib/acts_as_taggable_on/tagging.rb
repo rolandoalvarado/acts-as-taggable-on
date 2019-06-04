@@ -23,6 +23,7 @@ module ActsAsTaggableOn
 
     validates_uniqueness_of :tag_id, scope: [:taggable_type, :taggable_id, :context, :tagger_id, :tagger_type]
 
+    before_destroy :mark_as_deleted, if: :has_deleted_at?
     after_destroy :remove_unused_tags
 
     private
@@ -35,6 +36,14 @@ module ActsAsTaggableOn
           tag.destroy if tag.reload.taggings.count.zero?
         end
       end
+    end
+
+    def mark_as_deleted
+      self.update_attributes(deleted_at: Time.current)
+    end
+
+    def has_deleted_at?
+      ActiveRecord::Base.connection.column_exists?(ActsAsTaggableOn.taggings_table, :deleted_at)
     end
   end
 end
