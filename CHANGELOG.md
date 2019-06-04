@@ -13,6 +13,7 @@ As such, _Breaking Changes_ are major. _Features_ would map to either major or m
 ### [Master / Unreleased](https://github.com/mbleigh/acts-as-taggable-on/compare/v6.0.1...master)
 * Features
   * [@mizukami234 @junmoka Make table names configurable](https://github.com/mbleigh/acts-as-taggable-on/pull/910)
+  * [@rolandoalvarado Integrated act_as_paranoid and added ignore_deleted option](https://github.com/mbleigh/acts-as-taggable-on/pull/958)
 * Fixes
   * [@tonyta Avoid overriding user-defined columns cache methods](https://github.com/mbleigh/acts-as-taggable-on/pull/911)
 * Misc
