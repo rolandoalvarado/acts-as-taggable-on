@@ -9,7 +9,6 @@ when "mysql"
 else
   gem 'sqlite3'
 end
-gem 'acts_as_paranoid'
 gem 'rspec-rails', '~> 4.0.0.beta2'
 
 group :local_development do
