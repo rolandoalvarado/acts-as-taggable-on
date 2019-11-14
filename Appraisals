@@ -12,11 +12,8 @@ end
 
 appraise 'activerecord-6.0' do
   gem 'activerecord', "~> 6.0.0"
-<<<<<<< HEAD
 end
 
 appraise 'activerecord-6.1' do
   gem 'activerecord', "~> 6.1.0"
-=======
->>>>>>> c0a54d5... Fixed specs
 end
