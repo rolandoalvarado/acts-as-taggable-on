@@ -35,7 +35,7 @@ module ActsAsTaggableOn
     end
 
     def mark_as_deleted
-      self.update_attributes(deleted_at: Time.current)
+      self.update_columns(deleted_at: Time.current)
     end
 
     def has_deleted_at?
